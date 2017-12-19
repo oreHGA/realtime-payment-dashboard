@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Realtime Payment Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://codepen.io/drehimself/pen/VvYLmV.css"> 
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul class="navbar-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            </ul>
+        
+            <ul class="navbar-right">
+            <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
+            </ul>
+        </div> 
+    </nav>
+            
+            
+    <div class="container">
+        <div class="shopping-cart">
+            <div class="shopping-cart-header">
+                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                <div class="shopping-cart-total">
+                    <span class="lighter-text">Total:</span>
+                    <span class="main-color-text">$5.00</span>
+                </div>
+            </div>
+        
+            <ul class="shopping-cart-items">
+                <li class="clearfix">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+                    <span class="item-name">Sony DSC-RX100M III</span>
+                    <span class="item-price">$5</span>
+                    <span class="item-quantity">Quantity: 01</span>
+                </li>
+            </ul>
+        
+
+            <div style="margin-top: 20px; text-align:center">
+                <form method="POST" action="http://localhost:3120/gen-payment" enctype="multipart/form-data"/>
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_RZCXRu62wKJm8fOVTcZrOZB1"
+                        data-amount="500"
+                        data-name="Pay OG"
+                        data-description="Send money to OG"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto">
+                    </script>
+
+                </form>
+            </div>
+
+
+        </div> <!--end shopping-cart -->
+    </div> <!--end container -->
+
+    <style>
+        .shopping-cart-items{
+            list-style-type: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

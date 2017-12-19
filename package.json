@@ -1,0 +1,29 @@
+{
+  "name": "realtime-payment-dashboard",
+  "version": "1.0.0",
+  "description": "A realtime payment dashboard",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-multiparty": "^2.1.0",
+    "cors": "^2.8.4",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "pusher": "^1.5.1",
+    "stripe": "^5.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oreHGA/realtime-payment-dashboard.git"
+  },
+  "author": "Oreoluwa Ogundipe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oreHGA/realtime-payment-dashboard/issues"
+  },
+  "homepage": "https://github.com/oreHGA/realtime-payment-dashboard#readme"
+}
